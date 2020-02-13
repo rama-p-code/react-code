@@ -9,21 +9,21 @@ const Course = ({course}) => {
   //parts.forEach(function(item, index, array){
   //  total += item.exercises
   //})
-  console.log(total)
-  
+  //console.log(total)
+
   return(
-    <div>
+    <>
       <h1>{course.name}</h1>
       {parts.map(parts => <p key={parts.id}>{parts.name} {parts.exercises}</p>)}
       <p><strong>total of {total} exercises</strong></p>
-    </div>
+    </>
   )
 }
 const Courses = ({courses}) => {
   return (
-    <div>
+    <>
       {courses.map(course=><Course course={course} />)}
-    </div>
+    </>
   )
 }
 const App = () => {
@@ -73,9 +73,9 @@ const App = () => {
   ]
 
   return (
-    <div>
+    <>
       <Courses courses={courses} />
-    </div>
+    </>
   )
 }
 
